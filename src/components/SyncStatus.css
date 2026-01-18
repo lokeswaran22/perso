@@ -1,0 +1,37 @@
+.sync-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: help;
+}
+
+.sync-status.online {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.sync-status.offline {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.sync-icon {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .sync-text {
+        display: none;
+    }
+
+    .sync-status {
+        padding: 6px;
+    }
+}

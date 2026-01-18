@@ -1,0 +1,73 @@
+.category-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Horizontal scroll preferred for many categories */
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, black 95%, transparent 100%);
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.category-filter::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.category-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 99px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.category-pill:hover {
+    background: var(--bg-surface-hover);
+    color: var(--text-main);
+    border-color: var(--border-subtle);
+}
+
+.category-pill.active {
+    background: var(--text-main);
+    /* Inverted high contrast active state */
+    color: var(--bg-app);
+    border-color: var(--text-main);
+}
+
+.category-pill-icon {
+    font-size: 0.9rem;
+    /* Active icon inherits color from parent (bg-app when active) */
+}
+
+.category-pill-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: var(--bg-surface-hover);
+    color: var(--text-muted);
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
+.category-pill.active .category-pill-count {
+    background: var(--bg-app);
+    color: var(--text-main);
+}

@@ -1,0 +1,122 @@
+/* Wallet View - Aligned & Professional */
+
+.wallet-view-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Toolbar - Distinct Dark Container */
+.wallet-toolbar {
+    display: flex;
+    align-items: center;
+    /* Align items centered */
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.5rem;
+    /* Large padding as per screenshot */
+    background: var(--bg-surface);
+    /* Distinct surface */
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    min-height: 140px;
+    /* Ensure height matches screenshot */
+}
+
+.search-wrapper {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+    /* The blue border will be handled by search component */
+}
+
+/* View Toggles - Right aligned */
+.view-toggles {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    align-self: flex-start;
+    /* Move to top like screenshot? Or center? Screenshot shows top-ish */
+    margin-top: 1rem;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-icon:hover,
+.btn-icon.active {
+    color: var(--text-main);
+    background: var(--bg-surface-hover);
+}
+
+/* Category Filter - Below Toolbar */
+.category-filter {
+    padding: 0;
+    gap: 1rem;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar */
+}
+
+.category-filter::-webkit-scrollbar {
+    display: none;
+}
+
+/* Grid - 3D Perspectives */
+.wallet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+
+.wallet-grid.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Empty State - Centered empty view */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    min-height: 300px;
+    /* Give it some height */
+    animation: fadeIn 0.5s ease-out;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    margin-bottom: 2rem;
+    max-width: 400px;
+}

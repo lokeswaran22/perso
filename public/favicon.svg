@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="50%" style="stop-color:#007bff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0056b3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0z" fill="none"/>
+  <path fill="url(#shieldGrad)" d="M256 48C148 48 56 128 48 240c0 100 60 180 208 224 148-44 208-124 208-224C456 128 364 48 256 48z" transform="scale(0.9) translate(28,28)"/>
+  <!-- Better Shield Shape -->
+  <path fill="#0072ff" d="M256 32l-192 72v112c0 135 85 264 192 296 107-32 192-161 192-296V104L256 32z"/>
+  <path fill="#0056b3" d="M256 32v480c107-32 192-161 192-296V104L256 32z"/>
+</svg>

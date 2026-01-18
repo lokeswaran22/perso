@@ -1,0 +1,251 @@
+/* Settings View - Enhanced & Aligned */
+
+.settings-container {
+    padding: 1rem;
+    animation: fadeIn 0.4s ease-out;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.settings-grid {
+    display: grid;
+    /* Responsive Grid: Cards will be min 350px, but fill space equally */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: start;
+    /* Prevent cards from stretching to match height weirdly */
+}
+
+/* Card Styling */
+.settings-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 100%;
+    /* Ideally let them be natural height, but in grid this matches rows */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.settings-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-dark);
+}
+
+/* Header */
+.settings-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-surface-hover);
+}
+
+.settings-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.icon-box {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-app);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    border: 1px solid var(--border-color);
+    font-size: 1.2rem;
+}
+
+/* Body */
+.settings-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* User Profile Section */
+.user-profile-summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.avatar-placeholder {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.user-email {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    color: var(--success);
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+/* Setting Items */
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--bg-surface-hover);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.setting-info h5 {
+    font-size: 0.95rem;
+    margin: 0 0 0.25rem 0;
+    color: var(--text-main);
+}
+
+.setting-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 250px;
+    line-height: 1.4;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-large {
+    background: var(--bg-app);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    /* Pill shape */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.theme-toggle-large:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--primary);
+}
+
+/* 2FA Box */
+.setup-box-2fa {
+    background: var(--bg-app);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    animation: slideDown 0.3s ease-out;
+}
+
+.qr-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.secret-display code {
+    background: var(--bg-surface-hover);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: var(--primary);
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+}
+
+.verify-input-group {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.input-code {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--bg-surface-hover);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 0.2rem;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.input-code:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+    outline: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+}

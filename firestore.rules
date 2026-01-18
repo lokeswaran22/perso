@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ALLOW ALL - For debugging only
+    // This will let any authenticated user read/write anything
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

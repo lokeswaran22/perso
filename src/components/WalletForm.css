@@ -1,0 +1,309 @@
+/* Wallet Form Modal - Clean Dark/Light Theme */
+
+/* Wallet Form Modal - specific overrides */
+.wallet-form-modal {
+    /* Base styles inherited from global .modal */
+    max-height: 85vh;
+    /* Allow it to shrink if content is small */
+    height: auto;
+    /* Dynamic height */
+    background: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.wallet-form-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-surface);
+}
+
+.wallet-form-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Content Area */
+.wallet-form-content-wrapper {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background: var(--bg-app);
+    min-height: 300px;
+    /* Ensure logical minimum height */
+}
+
+.wallet-form {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Form Structure */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Inputs, Selects, Textareas - Clean SaaS Style */
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface-hover);
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-glow);
+    outline: none;
+    background: var(--bg-surface);
+}
+
+/* Badges */
+.sensitive-badge {
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border-radius: 99px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.markdown-badge {
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border-radius: 99px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Helper Buttons inside Form */
+.generate-pass-btn {
+    font-size: 0.8rem;
+    color: var(--primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.generate-pass-btn:hover {
+    text-decoration: underline;
+}
+
+/* Password Generator Sidebar */
+.password-gen-sidebar {
+    width: 320px;
+    background: var(--bg-surface);
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Dropzone - Clean */
+.dropzone {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    background: var(--bg-surface-hover);
+    transition: all 0.2s ease;
+}
+
+.dropzone:hover,
+.dropzone.active {
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    transition: transform 0.2s;
+}
+
+.dropzone:hover .upload-icon {
+    transform: translateY(-3px);
+    color: var(--primary);
+}
+
+.upload-hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* File List */
+.file-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    background: var(--bg-surface);
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.file-icon {
+    color: var(--text-muted);
+    margin-right: 0.75rem;
+}
+
+.file-name {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.remove-file-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    /* Force red for danger actions */
+    cursor: pointer;
+    padding: 0.25rem;
+    opacity: 0.7;
+}
+
+.remove-file-btn:hover {
+    opacity: 1;
+}
+
+/* Tags */
+.tags-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.tag-pill {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Footer Actions */
+.wallet-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-secondary {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--text-muted);
+}
+
+/* Error Messages */
+.error-message {
+    display: block;
+    font-size: 0.8rem;
+    color: #ef4444;
+    margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .wallet-form-content-wrapper {
+        flex-direction: column;
+    }
+
+    .password-gen-sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        max-height: 250px;
+    }
+
+    .wallet-form-modal {
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+}

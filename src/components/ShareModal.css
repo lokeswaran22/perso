@@ -1,0 +1,58 @@
+.share-modal {
+    max-width: 450px;
+}
+
+.share-info {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.share-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.qr-container {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+}
+
+.share-textarea {
+    font-family: monospace;
+    font-size: 0.8rem;
+    height: 100px;
+    word-break: break-all;
+    margin-top: var(--spacing-xs);
+}
+
+.share-link-box {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.input-group .input {
+    flex: 1;
+}
+
+.text-warning {
+    color: #f59e0b;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}

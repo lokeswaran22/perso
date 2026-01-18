@@ -1,0 +1,108 @@
+/* Search Bar - Matching Screenshot Alignment */
+
+.search-container {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--primary);
+    /* Blue border as per screenshot */
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 0 0 1px var(--primary-glow);
+    /* Subtle glow */
+    transition: all 0.3s ease;
+}
+
+/* Search Input Row */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.search-icon {
+    color: var(--text-main);
+    font-size: 1.2rem;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Actions (X, Filter Toggle) */
+.search-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-action-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    /* Blue filter icon */
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-action-btn:hover {
+    background: var(--bg-surface-hover);
+}
+
+/* Filters Area - always visible or structured inside */
+.search-filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    /* Subtle separator inside blue box? Or none? */
+    /* Screenshot doesn't clearly show a separator but shows alignment */
+    border-top: none;
+    /* Let's keep it clean */
+}
+
+.filter-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.filter-chip.active {
+    background: var(--text-main);
+    /* White pill */
+    color: var(--bg-app);
+    /* Black text */
+    border-color: var(--text-main);
+}
+
+.filter-chip.favorite-filter svg {
+    color: inherit;
+}
