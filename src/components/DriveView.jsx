@@ -89,8 +89,25 @@ const DriveView = ({ user }) => {
     };
 
     // Download with proper format
-    const handleDownload = (file) => {
-        downloadFile(file.id, file.name);
+    const handleDownload = async (file) => {
+        try {
+            const { url, name, type } = await getFileData(file.id);
+
+            // Create a link with the specific blob type if possible to preserve format
+            // getFileData already returns a blob URL with the correct type
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = name || file.name; // This name includes extension like .png, .pdf
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url); // Clean up
+
+            toast.success('Download started');
+        } catch (error) {
+            console.error('[handleDownload] ERROR:', error);
+            toast.error('Failed to download file');
+        }
         setMenuOpen(null);
     };
 
